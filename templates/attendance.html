@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance - Face Recognition System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mark Attendance</h1>
+        
+        <div class="card">
+            <form id="attendanceForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="video">Upload Entrance Video:</label>
+                    <input type="file" id="video" name="video" accept="video/*" required>
+                    <small>Upload video of people entering and looking at camera</small>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Process Video</button>
+            </form>
+            
+            <div id="processing" class="processing" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing video... This may take a few moments.</p>
+            </div>
+            
+            <div id="results" class="results" style="display: none;">
+                <h3>Attendance Results</h3>
+                <p>Session ID: <span id="sessionId"></span></p>
+                <p>Total Present: <span id="totalPresent"></span></p>
+                
+                <table id="attendanceTable" class="attendance-table">
+                    <thead>
+                        <tr>
+                            <th>Roll Number</th>
+                            <th>Full Name</th>
+                            <th>Time</th>
+                            <th>Confidence</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        
+        <a href="/" class="btn btn-link">← Back to Home</a>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

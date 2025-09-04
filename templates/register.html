@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User - Face Recognition System</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Register New User</h1>
+        
+        <div class="card">
+            <form id="registrationForm" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="roll_number">Roll Number:</label>
+                    <input type="text" id="roll_number" name="roll_number" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" id="full_name" name="full_name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="image">Face Photo:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                    <small>Upload a clear front-facing photo</small>
+                </div>
+                
+                <div id="preview" class="preview-container"></div>
+                
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            
+            <div id="message" class="message"></div>
+        </div>
+        
+        <a href="/" class="btn btn-link">← Back to Home</a>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
