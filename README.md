@@ -54,8 +54,3 @@ templates/          # Jinja2 HTML templates
 setup_database.sql  # Tables + RPC for similarity search
 requirements.txt
 ```
-
-### Screenshot
-- The README expects an image at `docs/ui.png`. Save your UI screenshot there (create the `docs/` folder if it doesn't exist) to render the preview above.
-
-
